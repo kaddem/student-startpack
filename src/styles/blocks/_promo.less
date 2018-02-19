@@ -1,0 +1,25 @@
+.promo {
+  padding: 50px 0;
+  background-color: lightsteelblue;
+
+  &__inner {
+    margin: 0 auto;
+
+    @media (min-width: 1280px) {
+      width: 1024px;
+    }
+  }
+
+  &__ttl {
+    font-size: @h1-fz-mobile;
+    font-weight: @h1-fw;
+
+    @media (min-width: 670px) {
+      font-size: @h1-fz-tablet;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: @h1-fz-desktop;
+    }
+  }
+}
