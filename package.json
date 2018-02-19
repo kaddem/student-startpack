@@ -1,0 +1,29 @@
+{
+  "name": "student-startpack",
+  "version": "1.0.0",
+  "description": "Простой сборщик на less для студентов",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaddem/student-startpack.git"
+  },
+  "author": "Kirill Demidov <kademidov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaddem/student-startpack/issues"
+  },
+  "homepage": "https://github.com/kaddem/student-startpack#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "css-mqpacker": "^6.0.2",
+    "gulp": "^3.9.1",
+    "gulp-4.0.build": "^4.0.0-build.a271520",
+    "gulp-less": "^3.5.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
