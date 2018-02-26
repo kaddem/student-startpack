@@ -6,6 +6,7 @@ const less          = require('gulp-less');
 const postcss       = require('gulp-postcss');
 const mqpacker      = require('css-mqpacker');
 const sourcemaps    = require('gulp-sourcemaps');
+const notify        = require('gulp-notify');
 
 const browserSync   = require('browser-sync').create();
 
@@ -30,6 +31,12 @@ gulp.task('less', function () {
     return gulp.src(path.src.style)
         .pipe(sourcemaps.init())
         .pipe(less())
+        .on('error', notify.onError({
+            message: 'Line <%= error.lineNumber %>:' +
+            ' <%= error.message %>' +
+            '\n<%= error.fileName %>',
+            title: '<%= error.plugin %>'
+        }))
         .pipe(postcss([
             mqpacker({
                 sort: true

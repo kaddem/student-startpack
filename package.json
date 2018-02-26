@@ -21,8 +21,8 @@
     "browser-sync": "^2.23.6",
     "css-mqpacker": "^6.0.2",
     "gulp": "^3.9.1",
-    "gulp-4.0.build": "^4.0.0-build.a271520",
     "gulp-less": "^3.5.0",
+    "gulp-notify": "^3.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-sourcemaps": "^2.6.4"
   }
