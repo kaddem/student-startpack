@@ -30,13 +30,6 @@ const path = {
 gulp.task('less', function () {
     return gulp.src(path.src.style)
         .pipe(sourcemaps.init())
-        // .pipe(less())
-        // .on('error', notify.onError({
-        //     message: 'Line <%= error.lineNumber %>:' +
-        //     ' <%= error.message %>' +
-        //     '\n<%= error.fileName %>',
-        //     title: '<%= error.plugin %>'
-        // }))
         .pipe(less()
             .on('error', notify.onError({
                 message: '<%= error.fileName %>' +
