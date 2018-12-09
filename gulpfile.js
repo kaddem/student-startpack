@@ -1,6 +1,5 @@
 'use strict';
 
-// const gulp          = require('gulp');
 const { series, parallel, src, dest, watch } = require('gulp');
 const less = require('gulp-less');
 const postcss = require('gulp-postcss');
@@ -47,26 +46,6 @@ function styles() {
 }
 exports.styles = styles;
 
-// gulp.task('less', function () {
-//     return gulp.src(path.src.style)
-//         .pipe(sourcemaps.init())
-//         .pipe(less()
-//             .on('error', notify.onError({
-//                 message: '<%= error.fileName %>' +
-//                 '\nLine <%= error.lineNumber %>:' +
-//                 '\n<%= error.message %>',
-//                 title  : '<%= error.plugin %>'
-//             }))
-//         )
-//         .pipe(postcss([
-//             mqpacker({
-//                 sort: true
-//             })
-//         ]))
-//         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest(path.www.style));
-// });
-
 function serve() {
     browserSync.init({
         server: "./www"
@@ -86,14 +65,3 @@ exports.default = series(
   parallel(styles),
   serve
 );
-
-// Static Server + watching less files
-// gulp.task('serve', ['less'], function() {
-
-//     browserSync.init({
-//         server: "./www"
-//     });
-
-//     gulp.watch(path.watch.srcStyle, ['less']);
-//     gulp.watch([path.watch.html, path.watch.buildStyle]).on('change', browserSync.reload);
-// });
